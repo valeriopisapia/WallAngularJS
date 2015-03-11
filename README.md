@@ -1,7 +1,7 @@
 # WallAngularJS
 Wall (similar to Facebook) with Angular.js and Twitter Bootstrap.
 
-Follow me (<a href="https://twitter.com/movidastar">@movidastar</a>) on twitter for latest updates and news about aft.
+Follow me (<a href="https://twitter.com/movidastar" target="_blank">@movidastar</a>) on twitter for latest updates and news about aft.
 
 #Getting started
 
