@@ -6,7 +6,7 @@ Wall written in AngularJS
 #License
 The MIT License
 
-Copyright (c) 2015, Sebastian Sdorra
+Copyright (c) 2015, Valerio Pisapia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
