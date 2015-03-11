@@ -1,0 +1,14 @@
+{
+  "name": “wallAngularJS”,
+  "description": “Wall written in AngularJS“,
+  "version": “1.0.0”,
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-route": "1.3.x",
+    "angular-loader": "1.3.x",
+    "angular-mocks": "~1.3.x",
+    "bootstrap": "~3.2.0"
+  }
+}

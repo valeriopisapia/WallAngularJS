@@ -1,0 +1,67 @@
+<div class="page" id="commentBox">
+    <div class="content container-fluid">
+        <div class="bg-info" style="padding: 10px;">
+            <form name="commentForm" class="commentForm" ng-submit="post()">
+                <input type="text" id="idUserMaster" value="3" hidden />
+                <input type="text" id="idFriend" value="3" hidden />
+
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" ng-model="author" class="form-control" id="inputName" placeholder="Enter Name..." required />
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <input type="text" ng-model="text" class="form-control" id="inputMessage" placeholder="Say something..." required />
+                </div>
+                <label id="lblWaiting_1"  ng-show="isWaiting">Loading...</label>
+                <input type="submit" value="Add" class="btn btn-primary" ng-show="!isWaiting" />
+            </form>
+        </div> <!-- Comment Form -->
+        <h3>Comments:</h3>
+        <div class="commentList">
+            <div class="animate-repeat" ng-repeat="comment in comments">
+                <div class="pull-left bg-primary" style="margin-top: 30px; width: 100%; padding:10px;">
+                    <div class="pull-left" style=" width: 100%;">
+                        <p class="">{{comment.author}}</p>
+                        <span class="" ng-bind="comment.text"></span>
+                        <br>
+                        <span class="" ng-bind="comment.date | date:'dd/MM/yyyy'"></span>
+                    </div>
+                    <div class="pull-left bg-danger">
+                        <div enter="deletePost(comment)" class="btn btn-danger">Delete Post</div>
+                    </div> <!-- Delete Comment Div -->
+                </div> <!-- Comment Div -->
+
+                <div class="pull-left" style="margin-top: 10px; width: 100%;">
+                    <div class="comment" ng-repeat="rcomment in replyComment">
+                        <span class="text-muted" ng-bind="rcomment.content"></span>
+                        <br>
+                        <span class="text-muted" ng-bind="rcomment.date | date:'dd/MM/yyyy'"></span>
+                        <br>
+                        <span class="text-muted" ng-bind="rcomment.author"></span>
+                    </div>
+                </div>
+
+                <div class="pull-left bg-warning" style="width: 100%; padding: 10px;">
+                    <input name="txtReply" type="text" ng-model="textReply" placeholder="Say something..." required />
+                    <div enter="postReply(textReply ,comment)" ng-show="!isWaiting" class="btn btn-primary">Add Reply</div>
+                    <label id="lblWaiting_2"  ng-show="isWaiting">Loading...</label>
+                </div> <!-- InputText Reply Comment Div -->
+                <div class="pull-left bg-warning" style="width: 100%; padding: 10px;">
+                    <div class="animate-repeat" class="comment" ng-repeat="rcomment in comment.reply">
+                        <div class="pull-left" style="margin-top: 10px; width: 100%;">
+                            <span class="text-muted" ng-bind="rcomment.content"></span>
+                            <br>
+                            <span class="text-muted" ng-bind="rcomment.date | date:'dd/MM/yyyy'"></span>
+                            <br>
+                            <span class="text-muted" ng-bind="rcomment.mitt_user"></span>
+                        </div>
+                        <div class="pull-left" style="width: 100%;">
+                            <div enter="deleteReplyPost(rcomment)" class="btn btn-danger">Delete Post</div>
+                        </div>
+                    </div>
+                </div> <!-- Reply Comment Div -->
+            </div> <!-- -->
+        </div> <!-- commentList Div -->
+    </div> <!-- container Div-->
+</div> <!-- commentBox Div-->
