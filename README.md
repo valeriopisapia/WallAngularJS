@@ -1,7 +1,13 @@
 # WallAngularJS
 Wall written in AngularJS
 
+#Getting started
+Install bower and grunt
 
+```
+npm install -g bower
+npm install -g grunt-cli
+```
 
 #License
 The MIT License
