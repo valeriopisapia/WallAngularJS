@@ -2,12 +2,36 @@
 Wall written in AngularJS
 
 #Getting started
-Install bower and grunt
+
+Install bower and grunt:
 
 ```
 npm install -g bower
 npm install -g grunt-cli
 ```
+
+Clone the repository:
+
+```
+git clone https://github.com/valeriopisapia/WallAngularJS.git
+cd WallAngularJS
+```
+
+Install npm and bower dependencies:
+
+```
+npm install
+bower install
+```
+
+Start npm:
+
+```
+npm start
+```
+
+Now you open the sample in your browser at http://localhost:8000/app.
+
 
 #License
 The MIT License
