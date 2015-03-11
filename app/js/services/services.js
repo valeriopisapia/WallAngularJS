@@ -74,10 +74,10 @@ myApp.factory('commentAPIservice', function ($http,urls) {
     return commentAPI;
 
 }).constant("urls",{
-    "GetComments" : 'json-data/comments.json', //'http://newsletter.crubles.com/ws.asmx/loadCommentTest',
-    "SetComment" : 'json-data/comment.json', //'http://newsletter.crubles.com/ws.asmx/setCommentTest',
-    "DeletePost" : 'json-data/deleteResponse.json',//'http://newsletter.crubles.com/ws.asmx/deleteCommentTest',
-    "SetReplyComment" : 'json-data/reply.json',//'http://newsletter.crubles.com/ws.asmx/setReplyComment',
-    "GetReplyComment" : 'json-data/reply-comments.json', //'http://newsletter.crubles.com/ws.asmx/getReplyComment',
-    "DeleteReplyComment" : 'json-data/deleteResponse.json' //'http://newsletter.crubles.com/ws.asmx/deleteReplyComment'
+    "GetComments" : 'json-data/comments.json', 
+    "SetComment" : 'json-data/comment.json', 
+    "DeletePost" : 'json-data/deleteResponse.json',
+    "SetReplyComment" : 'json-data/reply.json',
+    "GetReplyComment" : 'json-data/reply-comments.json', 
+    "DeleteReplyComment" : 'json-data/deleteResponse.json' 
 }); // commentAPIservice
